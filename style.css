@@ -1,0 +1,120 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Poppins', sans-serif; background: #111; color: #eee; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+h1, h2 { font-family: 'Playfair Display', serif; }
+.btn { background: #e74c3c; color: white; padding: 15px 30px; border-radius: 50px; text-decoration: none; display: inline-block; transition: 0.3s; }
+.btn:hover { background: #c0392b; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558655146-9f40138ed1cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero h1 { font-size: 4rem; margin-bottom: 20px; }
+.subtitle { font-size: 1.8rem; margin-bottom: 20px; color: #e74c3c; }
+.desc { max-width: 700px; margin: 0 auto 40px; font-size: 1.2rem; }
+
+/* Sections */
+.section { padding: 100px 0; text-align: center; }
+.bg-dark { background: #0a0a0a; }
+
+/* About */
+.tools span {
+  display: inline-block;
+  background: #222;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+}
+
+/* Filters */
+.filters {
+  margin: 40px 0;
+}
+.filter-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.filter-btn.active, .filter-btn:hover {
+  color: #e74c3c;
+  border-bottom: 3px solid #e74c3c;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.4s;
+}
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 30px 20px 20px;
+  text-align: left;
+}
+.overlay h3 { font-size: 1.4rem; margin-bottom: 5px; }
+.overlay p { font-size: 0.9rem; opacity: 0.9; }
+
+/* Contact */
+.contact-info p { margin: 20px 0; font-size: 1.2rem; }
+.social a { font-size: 2rem; margin: 0 20px; color: #aaa; transition: 0.3s; }
+.social a:hover { color: #e74c3c; }
+
+/* Modal Lightbox */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.95);
+  align-items: center;
+  justify-content: center;
+}
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
